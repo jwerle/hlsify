@@ -1,0 +1,37 @@
+{
+  "name": "hlsify",
+  "version": "1.0.0",
+  "description": "Simply command line utility to convert an input video into an extended multimedia playlist (M3U) with MPEG transport segments.",
+  "preferGlobal": true,
+  "bin": {
+    "hlsify": "./bin/hlsify"
+  },
+  "scripts": {
+    "test": ":"
+  },
+  "keywords": [
+    "hls",
+    "hlsify",
+    "m3u",
+    "m3u8",
+    "mpeg",
+    "ts",
+    "video",
+    "encode",
+    "mux"
+  ],
+  "author": "Joseph Werle <joseph.werle@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwerle/hlsify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jwerle/hlsify/issues"
+  },
+  "homepage": "https://github.com/jwerle/hlsify#readme"
+}

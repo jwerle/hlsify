@@ -1,0 +1,22 @@
+#! /usr/bin/env node
+
+const ffmpeg = require('fluent-ffmpeg')()
+
+const argv = process.argv.slice(2)
+const input = argv.splice(0, 1)[0]
+const output = argv.splice(-1, 1)[0]
+
+argv
+  // group flags by space and separate by `-`
+  .join(' ')
+  .split('-')
+  .filter(Boolean).map((o) => '-'+ o)
+  .reduce((ffmpeg, option) => {
+    if (!option) {
+      return ffmpeg
+    } else {
+      return ffmpeg.inputOption.apply(ffmpeg, option)
+    }
+  }, ffmpeg.input(input))
+  .output(output)
+  .run()
