@@ -27,7 +27,7 @@ argv
     if (!option) {
       return ffmpeg
     } else {
-      return ffmpeg.inputOption.apply(ffmpeg, option)
+      return ffmpeg.inputOption.call(ffmpeg, option)
     }
   }, ffmpeg.input(input))
   .output(output)
