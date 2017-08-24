@@ -6,6 +6,18 @@ const argv = process.argv.slice(2)
 const input = argv.splice(0, 1)[0]
 const output = argv.splice(-1, 1)[0]
 
+if (null == input) {
+  console.error("error: expecting input file")
+  usage()
+  process.exit(1)
+}
+
+if (null == output) {
+  console.error("error: expecting output file")
+  usage()
+  process.exit(1)
+}
+
 argv
   // group flags by space and separate by `-`
   .join(' ')
@@ -20,3 +32,7 @@ argv
   }, ffmpeg.input(input))
   .output(output)
   .run()
+
+function usage() {
+  console.error("usage: hlsify <input>.mp4 [...input options] <output>.m3u8")
+}
