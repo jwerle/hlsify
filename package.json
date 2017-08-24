@@ -1,6 +1,6 @@
 {
   "name": "hlsify",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Simply command line utility to convert an input video into an extended multimedia playlist (M3U) with MPEG transport segments.",
   "preferGlobal": true,
   "main": "./bin/hlsify",
